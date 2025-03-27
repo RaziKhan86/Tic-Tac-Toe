@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(158, 201, 226);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.main {
+    margin-top: 100px;
+    height: auto; /* Adjust height for responsiveness */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Buttons */
+.btn {
+    text-align: center;
+    width: 30%;
+    max-width: 200px; /* Max width limit */
+    min-width: 120px; /* Ensures usability on small screens */
+    height: 40px; /* Fixed height */
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: clamp(14px, 3vw, 18px); /* Scales with screen size */
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(61, 49, 49);
+}
+
+/* Rules section */
+.rule {
+    text-align: center;
+    font-size: clamp(16px, 4vw, 22px); /* Responsive font size */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .btn {
+        width: 80%; /* Makes buttons bigger on small screens */
+    }
+
+    .rule {
+        font-size: 18px; /* Adjust rule text size for better readability */
+    }
+}
